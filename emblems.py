@@ -52,7 +52,7 @@ class Emblems(GObject.GObject, Nautilus.PropertyPageProvider):
         )
 
         for file in self.files:
-            partial_cmd = 'gvfs-set-attribute "%s" -t' % file.get_uri()
+            partial_cmd = 'gio set "%s" -t' % file.get_uri()
 
             emblem = ''.join(
                 widget.get_model()[item][2]
